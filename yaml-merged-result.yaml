@@ -1,0 +1,28 @@
+# yaml-language-server: $schema=values.schema.json
+# Default values for base-chart.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+# @schema
+# additionalProperties: false
+# @schema
+# -- Application configuration
+name: MyApp # The application name
+version: 2.0.0
+server: 
+  host: localhost
+  port: 9000
+  timeout: 30
+  ssl: true
+database: 
+  type: postgres
+  host: db.production.com # This is the production database host
+  port: 5432
+  pool: 
+    min: 5
+    max: 20
+features: 
+  - logging
+  - metrics
+  - auth
+  - caching
+environment: production
